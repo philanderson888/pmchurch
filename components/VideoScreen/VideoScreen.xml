@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="VideoScreen" extends="Rectangle" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <interface>
+        <field id="content" type="node" />
+        <field id="startIndex" type="integer" alwaysnotify="true" onChange="OnIndexChanged" />
+        <field id="lastIndex" type="integer" alias="PlayerTask.lastIndex" />
+        <field id="isSeries" type="bool" />
+        <field id="close" type="bool" />
+    </interface>
+    <script type="text/brightscript" uri="VideoScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/bslib.brs" />
+    <children>
+        <PlayerTask id="PlayerTask" />
+    </children>
+</component>
+<!--//# sourceMappingURL=./VideoScreen.xml.map -->

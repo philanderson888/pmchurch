@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component name="MainScene" extends="Scene">
+    <interface>
+        <field id="inputArgs" type="assocarray" onChange="OnInputDeepLinking" />
+    </interface>
+    <script type="text/brightscript" uri="MainScene.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/BookmarkLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/SmartBookmarkLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/ScreenStackLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/ContentTaskLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/GridScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/VideoPlayer.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/DetailsScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/SeasonsWithEpisodesScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/EpisodesOnlyScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/DeepLinkingLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/source/main.brs" />
+    <script type="text/brightscript" uri="pkg:/source/bslib.brs" />
+    <children>
+        <Poster id="background" uri="pkg:/images/Pioneer_Roku_Background_1920x1080.jpg" width="1920" height="1080" />
+        <Label id="loadingIndicator" text="Loading..." width="1920" height="1080" translation="[0,0]" horizAlign="center" vertAlign="center" visible="false" font="font:MediumBoldSystemFont" />
+    </children>
+</component>
+<!--//# sourceMappingURL=./MainScene.xml.map -->

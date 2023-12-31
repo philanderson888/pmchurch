@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<component name="GridScreen" extends="Group" initialFocus="RowList">-->
+<component name="GridScreen" extends="Group" initialFocus="ZoomRowList">
+    <interface>
+        <!--<field id="content" type="node" alias="RowList.content" />-->
+		<field id="content" type="node" alias="ZoomRowList.content" />
+		<!--<field id="rowItemSelected" type="intarray" alwaysNotify="true" alias="RowList.rowItemSelected" />-->
+        <field id="rowItemSelected" type="intarray" alwaysNotify="true" alias="ZoomRowList.rowItemSelected" />
+        <!--<field id="jumpToRowItem" type="intarray" alwaysNotify="true" alias="RowList.jumpToRowItem" />-->
+		<field id="jumpToRowItem" type="intarray" alwaysNotify="true" alias="ZoomRowList.jumpToRowItem" />
+    </interface>
+    <script type="text/brightscript" uri="GridScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/bslib.brs" />
+    <children>
+	<Overhang logoUri="pkg:/images/overhang.png" translation="[-25,0]" />
+    <Label
+		id="titleLabel"
+		font="font:MediumBoldSystemFont"
+		width="1020"
+		translation="[120,202]"
+	/>
+    <Label
+		id="descriptionLabel"
+		font="font:SmallestSystemFont"
+		visible="true"
+		wrap="true"
+		width="1020"
+		numLines="3"
+		translation="[120,260]"
+	/>
+	
+	<ZoomRowList 
+		itemComponentName="ZoomRowListItemComponent"
+		id="zoomRowList"
+		animateToRow="0"
+		rowTitleFont="font:SmallestSystemFont"
+		showRowCounterForShortRows="false"
+		rowTitleOffset="[[0,0]]"
+		rowWidth="1675"
+		rowItemZoomYOffset="60"
+		rowItemYOffset="50"
+		spacingAfterRowItem="25"
+		spacingAfterRow="50"
+		showRowCounter="[true]"	
+		wrap="[true]"		
+		rowZoomHeight="[375]"
+		rowHeight="[200]"		
+		translation="[120,410]"
+	/>
+
+    <!--<RowList itemComponentName="RowListItemComponent" id="rowList" rowLabelFont="font:SmallestSystemFont" translation="[70,400]" numRows="3" rowItemSize="[[320,180]]" rowItemSpacing="[[20,0]]" itemSize="[1780,270]"  rowLabelOffset="[[50,20]]" focusXOffset="[50]" showRowLabel="[true]" showRowCounterForShortRows="false" showRowCounter="[true]" rowFocusAnimationStyle="floatingFocus" />-->
+    </children>
+</component>
+<!--//# sourceMappingURL=./GridScreen.xml.map -->

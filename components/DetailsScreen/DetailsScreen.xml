@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="DetailsScreen" extends="Group" initialFocus="Buttons" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <interface>
+        <field id="content" type="node" />
+        <field id="jumpToItem" type="integer" onChange="OnJumpToItem" value="0" alwaysNotify="true" />
+        <field id="itemFocused" type="integer" alwaysNotify="true" />
+        <field id="buttonSelected" type="integer" alias="buttons.itemSelected" />
+    </interface>
+    <script type="text/brightscript" uri="DetailsScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/BookmarkLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/SmartBookmarkLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/EpisodesOnlyScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/SeasonsWithEpisodesScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/ScreenStackLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/DetailsScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/VideoPlayer.brs" />
+    <script type="text/brightscript" uri="pkg:/source/main.brs" />
+    <script type="text/brightscript" uri="pkg:/source/bslib.brs" />
+    <children>
+	<!--<Overhang logoUri="pkg:/images/overhang.png" />-->
+		<!--Creates shadow behind the artwork-->
+		<Rectangle width="1920" height="1080" >
+        	<Poster id="shadow" uri="pkg:/images/details_artwork_shadow.png" width="1920" loadWidth="1920" height="1080" loadHeight="1080" loadDisplayMode="scaleToFit" />
+		</Rectangle>
+		<!--Title and other descriptive info-->
+		<LayoutGroup translation="[104, 98]" layoutDirection="vert" horizAlignment="left" itemSpacings="[150]">
+        	<LayoutGroup itemSpacings="[28, 15]" layoutDirection="vert">
+				<Label id="titleLabel" width="750" translation="[104, 429]" wrap="true" maxLines="2" horizAlign="left" font="font:LargeBoldSystemFont" color="0xffefefef" />
+				<Label
+					id="timeReleaseLabel"
+					translation="[104, 531]"
+					wrap="false"
+					horizAlign="left"
+					font="font:SmallestSystemFont"
+				/>
+			<!--<Label id="timeLabel" translation="[104, 531]" wrap="false" horizAlign="left" font="font:SmallestSystemFont" />-->
+			<!--<Label id="releaseLabel" wrap="false" width="357" translation="[104, 575]" font="font:SmallestSystemFont" />-->
+				<Label
+					id="descriptionLabel"
+					font="font:SmallestSystemFont"
+					ellipsizeOnBoundary="true"
+					visible="true"
+					wrap="true"
+					maxLines="4"
+					width="800"
+					translation="[104, 480]"
+					ellipsisText="...(* for more)"
+					/>
+			</LayoutGroup>
+        </LayoutGroup>
+		<!--Play actions-->
+		<Group>
+			<LabelList id="buttons" numRows="3" itemSpacing="[0,10]" itemSize="[593, 48]" focusedColor="0xffefefef" focusBitmapUri="pkg:/images/focus.9.png" translation="[98, 700]" />
+		</Group>
+		<!--Artwork-->
+		<Rectangle width="900" height="506" translation="[922, 98]" color="0xFFFFFF00">
+        	<Poster id="poster" width="900" loadWidth="900" height="506" loadHeight="506" loadDisplayMode="scaleToFit" />
+		</Rectangle>
+		<!--Corner logo-->
+		<Rectangle width="400" height="90" translation="[1467, 892]" color="0xFFFFFF00">
+			<Poster id="cornerLogo" uri="pkg:/images/overhang.png" width="400" height="90" />
+		</Rectangle>
+    </children>
+</component>
+<!--//# sourceMappingURL=./DetailsScreen.xml.map -->

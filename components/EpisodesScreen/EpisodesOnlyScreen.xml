@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component name="EpisodesOnlyScreen" extends="Group" initialFocus="episodesList" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <interface>
+        <field id="content" type="node" alwaysnotify="true" onChange="OnEpsiodeContentChange" />
+        <field id="selectedItem" type="integer" alwaysNotify="true" />
+        <field id="itemFocused" type="integer" alwaysNotify="true" />
+        <field id="itemSelected" type="integer" alwaysNotify="true" />
+        <field id="jumpToItem" type="integer" alwaysNotify="true" onChange="OnJumpToItem" />
+    </interface>
+    <script type="text/brightscript" uri="EpisodesOnlyScreen.brs" />
+    <script type="text/brightscript" uri="../UILogic/DeepLinkingLogic.brs" />
+    <script type="text/brightscript" uri="../UILogic/DetailsScreenLogic.brs" />
+    <script type="text/brightscript" uri="../UILogic/VideoPlayer.brs" />
+    <script type="text/brightscript" uri="../UILogic/ScreenStackLogic.brs" />
+    <script type="text/brightscript" uri="../UILogic/BookmarkLogic.brs" />
+    <script type="text/brightscript" uri="../UILogic/SmartBookmarkLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/main.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/SeasonsWithEpisodesScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/components/UILogic/EpisodesOnlyScreenLogic.brs" />
+    <script type="text/brightscript" uri="pkg:/source/bslib.brs" />
+    <children>
+		<Overhang logoUri="pkg:/images/overhang.png" />
+        <LayoutGroup layoutDirection="horiz" translation="[90.0, 150.0]" itemSpacings="[20]">
+            <LayoutGroup layoutDirection="vert" translation="[90.0, 150.0]" itemSpacings="[20]">
+                <Rectangle height="201" translation="[0,0]" width="357">
+                    <Poster height="201" id="seriesThumbnail" loadDisplayMode="scaletofit" width="357" />
+                </Rectangle>
+                <Label id="episodeDescription" width="357" wrap="true" horizAlign="left" maxLines="3" ellipsisText="...(* for more)" />
+            </LayoutGroup>
+            <MarkupList id="episodesList" itemComponentName="EpisodesListItemComponent" focusBitmapUri="pkg:/images/focus.9.png" focusFootprintBitmapUri="pkg:/images/focus.9.png" itemSize="[650, 160]" itemSpacing="[0, 20]" numRows="3" />
+        </LayoutGroup>
+    </children>
+</component>
+<!--//# sourceMappingURL=./EpisodesOnlyScreen.xml.map -->

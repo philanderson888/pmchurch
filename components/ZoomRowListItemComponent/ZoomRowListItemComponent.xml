@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component name="ZoomRowListItemComponent" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.
+com/schema/RokuSceneGraph.xsd">
+    <interface>
+        <field id="itemContent" type="node" onChange="OnContentSet" />
+    </interface>
+    <script type="text/brightscript" uri="ZoomRowListItemComponent.brs" />
+    <script type="text/brightscript" uri="pkg:/source/bslib.brs" />
+    <children>
+		<Poster
+			id="poster"
+			loadDisplayMode="scaleToFit"
+			width="600"
+			height="338"
+			loadWidth="600"
+			loadHeight="338"
+		/>
+        <!--<Poster id="poster" loadDisplayMode="scaleToFit" width="320" height="180" loadWidth="320" loadHeight="180" />-->
+    </children>
+</component>
+<!--//# sourceMappingURL=./ZoomRowListItemComponent.xml.map -->
+
+<!--THIS IS "ITEM COMPONENT FIELDS" AT https://developer.roku.com/fr-ca/docs/references/scenegraph/list-and-grid-nodes/zoomrowlist.md#sample-channel-->
